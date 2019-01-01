@@ -208,6 +208,18 @@ $$ RU(X) = \sum_{X \subseteq T_j \in D} RU(x, T_j) $$
 
 Ví dụ, trong hình \ref{fig:table2}, $RU(ac) = 2 + 36 + 20 + 6 + 7 + 4 = 75$
 
+\paragraph{Định nghĩa 14} (Về thứ tự các món hàng). Các món hàng trong cơ sở dữ liệu các giao dịch được xử lý theo thứ tự $\succ$ xếp theo giá trị TWU tăng dần. Trong ví dụ của bài báo thứ tự là $ f \succ g \succ d \succ b \succ e \succ a \succ c $.
+
+\paragraph{Định nghĩa 15} (Về phần mở rộng của itemset). $Ext(X)$ là phần mở rộng của itemset X, là tất cả các món hàng sau X trong tập hợp các món hàng được xếp theo thứ tự. Ví dụ: $Ext(b) = \{ e, a, c \}$ và $Ext(fd) = \{b, e, a, c \}$.
+
+\paragraph{Định nghĩa 16} $SMU(X)$ là hậu tố tiện ích tối thiểu (suffix minimum utility) của X. 
+
+$$ SMU(U) = min(MIU(X), MIU(Ext(X))) $$
+
+Ví dụ, $SMU(ea) = min(MIU(ea), MIU(Ext(ea))) = min (MIU(ea), MIU(c)) = min(min(62, 80), 77) = 62$
+
+
+
 \subsection{Giới thiệu bài toán}
 
 \section{Thuật toán MHUI}
