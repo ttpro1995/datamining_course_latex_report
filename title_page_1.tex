@@ -156,11 +156,62 @@ Hình \ref{fig:table2} là một cơ sở dữ liệu D chứa thông tin các g
 
 \paragraph{Định nghĩa 5} Mỗi món hàng $x_i \in T_j$ có giá trị tiện ích bên trong (internal utility value), kí hiệu là $IU(x_i, T_j)$. Ví dụ: trong hình \ref{fig:table2}, $UI(b, T_3) = 2$
 
+\paragraph{Định nghĩa 6} Giá trị tiện ích của món hàng $x_i \in T_j$ kí hiệu $U(x_i, T_j)$ là tích của giá trị tiện ích ngoài và giá trị tiện ích bên trong. 
 
+$$ U(x_i, T_j) = EU(x_i) \times IU(x_i, T_j) $$ .
+
+Ví dụ: $U(b, T_3) = EU(b) \times IU(b, T_3) = 2 \times 2 = 4$
+
+Giá trị tiện ích thể hiện mức độ quan trọng của món hàng về số lượng được mua (giá trị tiện ích trong) và lợi nhuận mỗi đơn vị (giá trị tiện ích ngoài)
+
+\paragraph{Định nghĩa 7} Giá trị tiện ích của itemset X trong giao dịch $T_j$ là tổng giá trị tiện ích của mỗi món hàng trong itemset đó. 
+$$U(X, T_j) = \sum_{x_i \in X} U(x_i, T_j)$$
+Ví dụ: trong hình \ref{fig:table2}, $U(ac, T_1) = 5 + 4 = 9$
+
+\paragraph{Định nghĩa 8} $U(X)$ giá trị tiện ích của itemset X trong cơ sở dữ liệu D, bằng tổng giá trị tiện ích của itemset X trong mỗi giao dịch $T_j$
+
+$$ U(X) = \sum_{x_i \subseteq T_j \in D} U(X, T_j) $$
+
+Ví dụ: $U(ac) = U(ac, T_1) + U(ac, T_2) + U(ac, T_3) + U(ac, T_6) + U(ac, T_7) + U(ac, T_8) = 9 + 34 + 9 + 28 + 9 + 13 = 101 $
+
+\paragraph{Định nghĩa 9} Tiện ích của giao dịch $TU(T_j)$ là tổng tiện ích của mỗi món hàng trong giao dịch j.
+
+$$ TU(T_j) = \sum_{X \subseteq T_j and x_i \in X} U(x_i, T_j) $$
+
+Ví dụ: $TU(T_5) = U(b, T_5) + U(c, T_5) + U(e, T_5) + U(g, T_5) = 27$
+
+\paragraph{Định nghĩa 10}  $TWU(X)$ là trọng số giao dịch tiện ích (transaction weighted utility) của itemset X , bằng tổng tiện ích của các giao dịch có chứa itemset X.
+
+$$ TWU(X) = \sum_{X \subseteq T_j \in D} TU(T_j) $$
+
+Giá trị $TWU$ của từng món hàng ghi trong hình \ref{fig:table4}.
+
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{image/table/table4.PNG}
+\caption{\label{fig:table4} Trọng số giao dịch tiện ích  }
+\end{figure}
+
+\paragraph{Định nghĩa 11} $T_j/X$ là tập hợp các món hàng sau $X$ trong $T_j$. Ví dụ: trong hình \ref{fig:table2}, $T_i/ac = d, T_7/ac = df$.
+
+\paragraph{Định nghĩa 12} $RU(X, T_j)$  là tiện ích còn lại (remaining utility) của itemset X trong giao dịch $T_j(X \subseteq T_j)$.
+
+$$ RU(X, T_j) = \sum_{x_i \in (T_j/X)} U(x_i, T_j) $$
+
+Ví dụ, trong hình \ref{fig:table2}, $RU(ac, T_1) = 2, RU(ac, T_7) = 4 + 3 = 7 $  
+
+\paragraph{Định nghĩa 13} $RU(X)$ là tiện ích còn lại của itemset X trong cơ sở dữ liệu D, tính bằng tổng các tiện ích còn lại của X ở mỗi giao dịch $T_j$
+
+$$ RU(X) = \sum_{X \subseteq T_j \in D} RU(x, T_j) $$
+
+Ví dụ, trong hình \ref{fig:table2}, $RU(ac) = 2 + 36 + 20 + 6 + 7 + 4 = 75$
 
 \subsection{Giới thiệu bài toán}
 
 \section{Thuật toán MHUI}
+
 
 
 
