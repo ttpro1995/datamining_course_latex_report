@@ -80,7 +80,13 @@ $$ RU(X) = \sum_{X \subseteq T_j \in D} RU(x, T_j) $$
 
 Ví dụ, trong hình \ref{fig:table2}, $RU(ac) = 2 + 36 + 20 + 6 + 7 + 4 = 75$
 
-\paragraph{Định nghĩa 14} (Về thứ tự các món hàng). Các món hàng trong cơ sở dữ liệu các giao dịch được xử lý theo thứ tự $\succ$ xếp theo giá trị TWU tăng dần. Trong ví dụ của bài báo thứ tự là $ f \succ g \succ d \succ b \succ e \succ a \succ c $.
+\paragraph{Định nghĩa 14} (Về thứ tự các món hàng). Các món hàng trong cơ sở dữ liệu các giao dịch được xử lý theo thứ tự $\succ$ xếp theo giá trị TWU tăng dần. Trong ví dụ của bài báo thứ tự là $ f \succ g \succ d \succ b \succ e \succ a \succ c $. Hình \ref{fig:table5} là cơ sở dữ liệu với mỗi giao dịch đã được sắp xếp các món hàng theo thứ tự TWU. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{image/table/table5.PNG}
+\caption{\label{fig:table5} Cơ sở dữ liệu sau khi sắp xếp theo TWU  }
+\end{figure}
 
 \paragraph{Định nghĩa 15} (Về phần mở rộng của itemset). $Ext(X)$ là phần mở rộng của itemset X, là tất cả các món hàng sau X trong tập hợp các món hàng được xếp theo thứ tự. Ví dụ: $Ext(b) = \{ e, a, c \}$ và $Ext(fd) = \{b, e, a, c \}$.
 
