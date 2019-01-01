@@ -155,9 +155,16 @@ $$HUI = \{ X : U(X) | X \subseteq I, U(X) \geq MIU(X) \} $$
 
 \subsubsection{MHUI main}
 
-\paragraph{Dữ liệu đầu vào} Cơ sở dữ liệu D, ngưỡng giá trị tiện ích tối thiểu cho từng món hàng.  
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{image/algo/algo1.PNG}
+\caption{\label{fig:algo1} MHUI main}
+\end{figure}
 
-\paragraph{Dữ liệu đầu ra} HUIs, tập các itemset có giá trị tiện ích cao
+\paragraph{Dữ liệu đầu vào} Cơ sở dữ liệu D, ngưỡng giá trị tiện ích tối thiểu cho từng món hàng.  
+\paragraph{Dữ liệu đầu ra} HUIs, tập các itemset có giá trị tiện ích cao.\\\\
+
+
 
 Hình \ref{fig:algo1} là hàm bắt đầu chương trình. Chương trình sẽ tính các TWU (tạo ra bảng như hình\ref{fig:table4}), dòng 1 trong thuật toán, đây là lần duyệt cơ sở dữ liệu đầu tiên. Sau đó, chương trình duyệt qua cơ sở dữ liệu lần 2, ở mỗi giao dịch $T_j$ chương trình sẽ làm những việc sau đây trong mỗi vòng lập qua 1 giao dịch.
 
@@ -169,12 +176,6 @@ Hình \ref{fig:algo1} là hàm bắt đầu chương trình. Chương trình s�
 \end{itemize}
 
 Sau khi kết thức vòng lập, sắp xếp ULs theo thứ tự TWU (dòng 17), gọi hàm Explore-Search-Tree (dòng 18). 
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=0.9\textwidth]{image/algo/algo1.PNG}
-\caption{\label{fig:algo1} MHUI main}
-\end{figure}
 
 \subsubsection{Hàm duyệt cây: Explore-Search-Tree }
 
