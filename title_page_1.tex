@@ -47,6 +47,9 @@
     urlcolor=cyan,
 }
 
+% change name 
+\renewcommand{\lstlistingname}{Mã }% Listing -> Algorithm
+\addto\captionsenglish{\renewcommand{\figurename}{Hình}} % figure -> Hình 
 
 \begin{document}
 
@@ -88,7 +91,7 @@ Thái Thiện  -- 17C12031 % Your name
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Giảng viên:} \\
-TS. Tên giảng viên % Supervisor's Name
+PGS.TS. LÊ HOÀI BẮC % Supervisor's Name
 \end{flushright}
 \end{minipage}\\[2cm]
 
@@ -120,16 +123,31 @@ TS. Tên giảng viên % Supervisor's Name
 Báo cáo này sẽ trình bày về bài báo "Efficient mining of high utility itemsets with multiple minimum utility thresholds" \cite{krishnamoorthy2018efficient} của tác giả Srikumar Krishnamoorthy, thuộc đơn vị Học viện Quản lý Ahmedabad, Ấn Độ. Bài báo đăng trong tập chí Engineering Applications of Artificial Intelligence, năm 2018. 
 
 
+\section{Các định nghĩa về ký hiệu và bài toán}
 
-Đây là template để làm báo cáo. Hỗ trợ gõ tiếng việt.
+\subsection{Định nghĩa}
 
-\subsection{Chèn hình}
+Cho tập $ I = \{i_1, i_2, ..., i_m\}$ là tập các món hàng (item) khác nhau. Một giao dịch (transaction) $T_j = \{x_l | 1, 2, ...N_j, x_l \in I \} $ với $N_j$ là số hàng trong giao dịch  $T_j$. Một cơ sở dữ liệu (database) $D$ có chứa các giao dịch, $D = \{T_1, T_2, ..., T_m\}$, với $m$ số các giao dịch trong cơ sở dữ liệu. Một tập hợp chưa các món hàng $X =\{ x_1, x_2, ... x_k \} \subset I, x_i \in I $ gọi là k-itemset. 
 
-\section{Các định nghĩa}
-
-Cho tập $ I = \{i_1, i_2, ..., i_m\}$ là tập các món hàng (item) khác nhau. Một giao dịch (transaction) $T_j = \{x_l | 1, 2, ...N_j, x_l \in I \} $ với $N_j$ là số hàng trong giao dịch  $T_j$. Một cơ sở dữ liệu (database) $D$ có chứa các giao dịch, $D = \{T_1, T_2, ..., T_m\}$, với $m$ số các giao dịch trong cơ sở dữ liệu. 
+Hình \ref{fig:table2} là một cơ sở dữ liệu D chứa thông tin các giao dịchụ. Hình \ref{fig:table3} là lợi nhuận mỗi đơn vị của mỗi món hàng, và giá trị sử dụng tối thiểu được cho trước.
 
 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{image/table/table2.PNG}
+\caption{\label{fig:table2} Cơ sở dữ liệu}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.9\textwidth]{image/table/table3.PNG}
+\caption{\label{fig:table3} Lợi nhuận và giá trị sử dụng tối thiểu}
+\end{figure}
+
+\paragraph{Định nghĩa 1}: $ MU(x_i) $ là giá trị tiện ít tối thiểu của món hàng $x_i$. Thực tế, giá trị tiện ích tối thiểu của món hàng thể hiện hạn mức quan trọng của người dùng đối với món hàng đó. Trong quá trình khai thác, ta tính giá trị tiện ích của mỗi món hàng. Nếu giá trị tiện ích dưới giá trị tiện ích tối thiểu, ta không xét món hàng đó nữa. 
+
+\subsection{Giới thiệu bài toán}
 
 \section{Thuật toán MHUI}
 
