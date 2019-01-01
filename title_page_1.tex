@@ -147,8 +147,14 @@ Hình \ref{fig:table2} là một cơ sở dữ liệu D chứa thông tin các g
 
 \paragraph{Định nghĩa 1}: $ MU(x_i) $ là giá trị tiện ít tối thiểu (minimum utility threshold) của món hàng $x_i$. Thực tế, giá trị tiện ích tối thiểu của món hàng thể hiện hạn mức quan trọng của người dùng đối với món hàng đó. Trong quá trình khai thác, ta tính giá trị tiện ích của mỗi món hàng. Nếu giá trị tiện ích dưới giá trị tiện ích tối thiểu, ta không xét món hàng đó nữa. 
 
-\paragraph{Định nghĩa 2} $MIU(X)$ là giá trị tiện ích tối thiểu của k-itemset, là $MU(x)$ với $x$ là món hàng có giá trị tiện ích tối thiểu nhỏ nhất. $MIU(X) = min \{MU(x_j|x_j \in X\}$  
+\paragraph{Định nghĩa 2} $MIU(X)$ là giá trị tiện ích tối thiểu của k-itemset, là $MU(x)$ với $x$ là món hàng có giá trị tiện ích tối thiểu nhỏ nhất. $MIU(X) = min \{MU(x_j|x_j \in X\}$ . Ví dụ: $MIU(a) = 80$, $MIU(af) = min\{MU(a), MU(f)\} = 44$
 
+
+\paragraph{Định nghĩa 3} Chỉ số support của itemset X trong cơ sở dữ liệu D kí hiệu là $Sup(X)$. Support của itemset là tỉ lệ của tần số xuất hiện của itemsetX và tổng số giao dịch n. Ví dụ: $Sup(ac) = 6/8$
+
+\paragraph{Định nghĩa 4} Mỗi món hàng $x_i \in I$ đều có giá trị tiện ích ngoài (external utility value), ký hiệu là $EU(x_i)$. Ví dụ: trong hình \ref{fig:table3} $EU(b) = 2$
+
+\paragraph{Định nghĩa 5} Mỗi món hàng $x_i \in T_j$ có giá trị tiện ích bên trong (internal utility value), kí hiệu là $IU(x_i, T_j)$. Ví dụ: trong hình \ref{fig:table2}, $UI(b, T_3) = 2$
 
 
 
