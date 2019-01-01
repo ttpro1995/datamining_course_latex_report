@@ -145,7 +145,12 @@ Hình \ref{fig:table2} là một cơ sở dữ liệu D chứa thông tin các g
 \caption{\label{fig:table3} Lợi nhuận và giá trị sử dụng tối thiểu}
 \end{figure}
 
-\paragraph{Định nghĩa 1}: $ MU(x_i) $ là giá trị tiện ít tối thiểu của món hàng $x_i$. Thực tế, giá trị tiện ích tối thiểu của món hàng thể hiện hạn mức quan trọng của người dùng đối với món hàng đó. Trong quá trình khai thác, ta tính giá trị tiện ích của mỗi món hàng. Nếu giá trị tiện ích dưới giá trị tiện ích tối thiểu, ta không xét món hàng đó nữa. 
+\paragraph{Định nghĩa 1}: $ MU(x_i) $ là giá trị tiện ít tối thiểu (minimum utility threshold) của món hàng $x_i$. Thực tế, giá trị tiện ích tối thiểu của món hàng thể hiện hạn mức quan trọng của người dùng đối với món hàng đó. Trong quá trình khai thác, ta tính giá trị tiện ích của mỗi món hàng. Nếu giá trị tiện ích dưới giá trị tiện ích tối thiểu, ta không xét món hàng đó nữa. 
+
+\paragraph{Định nghĩa 2} $MIU(X)$ là giá trị tiện ích tối thiểu của k-itemset, là $MU(x)$ với $x$ là món hàng có giá trị tiện ích tối thiểu nhỏ nhất. $MIU(X) = min \{MU(x_j|x_j \in X\}$  
+
+
+
 
 \subsection{Giới thiệu bài toán}
 
