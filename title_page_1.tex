@@ -148,7 +148,7 @@ Khai thác luật kết hợp (Association Rule Mining - ARM) là một bài to�
 
 Thuật toán tìm tập hàng phổ biết thường chỉ có một hạn mức support nên thường bị vấn đề hàng hiếm \cite{liu1999mining}. Vì vậy, đã có một vài nghiên cứu về cách dùng nhiều hạn mức support. Một số thuật toán như MSApriori \cite{liu1999mining}, CFP-Growth \cite{hu2006mining}, CFP-Growth ++ \cite{kiran2011novel}, FP-ME \cite{gan2017mining}. Nhưng các phương pháp đó có những hạn chế như không thể áp dụng cho bài toán khai thác HUI có những đại lượng dùng tổng quát là giá trị hữu dụng như lợi nhuận, số lượng mua \cite{lin2016efficient}. 
 
-\subsubsection{Khai thác tập hữu dũng cao : Một ngưỡng hữu dụng}
+\subsubsection{Khai thác tập hữu dụng cao : Một ngưỡng hữu dụng}
 
 Khai thác tập hữu dụng (HUI mining) là một trong những chủ đề được nghiên cứu tích cực nhất trong mười năm nay. Vấn đề được nêu lên lần đầu bởi Liu và cộng sự (2005) để giải quyết hạn chế trong phương pháp khai thác luật kết hợp. Thuật toán hai bước \cite{liu2005two} đề xuất cách tạo ứng viên theo từng mức và cách kiểm chứng. Bước đầu, thuật toán khai thác tất cả nhóm hàng có giá trị hữu dụng theo trọng số giao dịch cao. Bước sau, giá trị hữu dụng của từng nhóm hàng được tính và nhóm không phải HUI bị lược bỏ. Các giải pháp tương tự như UMining and UMining\_H \cite{yao2006mining}, FUM and DCG+ \cite{li2008isolated}, GPA \cite{lan2012efficient}.
 
@@ -157,6 +157,16 @@ Thuật toán khai thác theo từng bật không mở rộng tốt với dữ l
 Các công trình gần đây sử dụng cấu trúc cơ sở dữ liệu dọc để khai thác HUI hiệu quả. Một cấu trúc dữ liệu dạng dãy hữu dụng để chứa thông tin về nhóm hàng. Một số công trình về dãy hữu dụng như HUI-Miner \cite{liu2012mining}, FHM \cite{fournier2014fhm}, HUP-Miner \cite{krishnamoorthy2015pruning}. Cách dùng dãy hữu dụng được chứng mình là tốt nhất vì nó không tạo ra ứng viên và sử dụng chiến thuật cắt tỉa hiệu quả \cite{fournier2014fhm} \cite{liu2012mining}. d2HUP \cite{liu2012mining} sử dụng cấu trúc dữ liệu hyperlink tên là CAUL để khai thac HUI hiệu quả.
 
 Thuật toán EFIM \cite{zida2017efim} dùng cơ sở dữ liệu ngang để lưu thông tin về nhóm hàng. Thuật toán gộp các giao dịch trùng lấp trong cơ sở dữ liệu dày đặc. 
+
+\subsubsection{Khai thác tập hữu dụng cao : Nhiều ngưỡng hữu dụn}
+
+Lin và cộng sự (2015) \cite{lin2015mining} dặt vấn đề khai thác HUI với nhiều ngưỡng hữu dụng và trình bài hai thuật toán HUI-MMU và HUI-MMU-TID. Nhóm tác giả trình bài khái niệm về Least Minimum Utility (LMU) và Sorted Downward Closure (SDC). 
+
+Công trình của Lin và cộng sự (2016c) \cite{lin2016efficient} mở rộng ý tưởng của công trình của Lin và cộng sự (2015) \cite{lin2015mining} và giới thiệu thuật toán HUI-MMU-TE. Ý chính của họ là dùng TID-index và cấu trúc dữ liệu EUCS \cite{fournier2014fhm} để tăng hiệu xuất khai thác. 
+
+Cả hai công trình trên đều theo hướng tiếp cận hai bước và không thích hợp cho dữ liệu lớn và thưa. Global Downward Closure (GDC) và Conditional Downward Closure (CDC) \cite{gan2016more} là hai tính chất tỉa cây được sửa chữa từ phương pháp TWU-Prune \cite{liu2005two} và U-Prune \cite{liu2012mining}. Phương pháp HIMU-EUCP cho thấy vượt trội hơn so với HUI-MMU và HUI-MMU-TID. 
+
+
 
 \section{Các định nghĩa về ký hiệu và bài toán}
 
