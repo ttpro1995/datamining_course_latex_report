@@ -126,9 +126,19 @@ Báo cáo này sẽ trình bày về bài báo "Efficient mining of high utility
 
 Bài báo cung cấp một giải pháp cho bài toán khai tập hàng có hữu dụng cao (high utility itemset mining). Giải quyết bài toán này cho phép người ra quyết định khả năng linh hoạc khi sử dụng những giá trị hữu dụng của món hàng như lợi nhuận để khai thác những dấu hiệu từ cơ sở dữ liệu mà thông qua đó có thể đưa ra quyết định.  
 
-Bài báo giới thiệu phương pháp tạo ra các tập hàng hữu dụng cao chỉ qua một bước mà không cần thông qua bước tạo các ứng cử viên tốn kém. Ngoài ra bài báo đề xuất một khái niệm gọi là tiền tố hữu dụng tối thiểu và phương pháp tỉa cây hiệu quả cho việc khai thác tập hàng có tính hữu dụng cao.
+Bài báo giới thiệu phương pháp tạo ra các tập hàng hữu dụng cao chỉ qua một bước mà không cần thông qua bước tạo các ứng cử viên tốn kém. Ngoài ra bài báo đề xuất một khái niệm gọi là tiền tố hữu dụng tối thiểu và phương pháp tỉa cây hiệu quả cho việc khai thác tập hàng có tính hữu dụng cao. 
 
+Khai thác tập phổ biến hoặc có tính hữu dụng cao được áp dụng trong nhiều lĩnh vực như bán lẽ, nhà kho, thương mại điện tử, ngân hàng, bảo hiểm, chăm sóc sức khỏe. Tập phổ biến hoặc tập có tính hữu dụng cao giúp quản lý phân tích cách mà khách hàng mua sản phẩm hoặc nhu cầu, từ đó đề ra phương pháp vận hành kho bãi hiệu quả \cite{chen2005aggregation, chen2005association}.
 
+\subsection{Đóng góp của bài báo}
+
+Bài báo có các đóng góp chính sau
+
+\begin{enumerate}
+  \item Bài báo giới thiệu thuật toán mới, gọi là MHUI, giúp khai thác hiệu quả các tập hữu dụng cao (High utility itemset - HUI) với nhiều (theo từng món hàng) hạn mức hữu dụng tối thiểu. Bài toán sử dụng cơ sở dữ liệu hàng dọc để lưu trữ thông tin các tập hàng và khai thác HUI
+  \item Bài báo giới thiệu khải niệm Hậu tố hữu dụng tối thiểu (Suffix Minimum Utility - SMU) để khai thác HUI hiệu quả. SMU được dùng thay thế cho phương pháp cắt tỉa vì các phương pháp cắt tỉa thông thường không còn phù hợp cho cách khai thác HUI được đề xuất này.
+  \item Tác giả làm thí nghiệm so sánh MHUI với các phương pháp tối tân hiện nay trên 8 cơ sở dữ liệu thưa và dày để chứng tỏ MHUI có ích. Phương pháp MHUI nhanh hơn HUI-MMU-TE \cite{lin2016efficient} và HIMU-EUCP \cite{gan2016more} hàng trăm lần.  
+\end{enumerate}
 
 \section{Các định nghĩa về ký hiệu và bài toán}
 
