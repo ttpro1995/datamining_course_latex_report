@@ -1,0 +1,14 @@
+
+\paragraph{TWU-M-Prune} Nếu $TWU(X) < SMU(X)$ thì những itemset có chứa X (superset của X) không phải là HUI. TWU-M-Prune thực hiện ở dòng 6 trong hình \ref{fig:algo1}.
+
+\paragraph{U-M-Prune} Nếu tổng giá trị tiện ích hậu tố của itemset X nhỏ hơn SMU(X) thì những itemset chứa X (superset của X) không phải HUI. Cụ thể $U(X) + RU(X) < SMU(X)$ thì những itemset chứa X không phải HUI. U-M-Prune thực hiện ở dòng 3 trong hình \ref{fig:algo2}.
+
+\paragraph{EUCS-M-Prune} Nếu EUCS của 2-itemset X nhỏ hơn SMU(X) thì những itemset có chứa X (superset của X) không phải là HUI. 
+
+\paragraph{LA-M-Prune} Phương pháp tỉa cây này sử dụng cả 2 itemset là X và Y, được dùng trong thuật toán xây dựng Utility List (hình \ref{fig:algo3}. Có thể hiểu như sau: 
+
+\begin{itemize}
+  \item Tính tổng = $U(X) + RU(X)$ (dòng 2)
+  \item Nếu một giao dịch $T_j$ chứa itemset X mà không chứa itemset Y thì giảm tổng đi $U(X, T_j) + RU(X, T_j)$ (điều kiện if dòng 4, phép tính dòng 14) 
+  \item Nếu tổng đó nhỏ hơn SMU(X) thì ta cắt bỏ X và kết luận những itemset có chứa X (superset của X) không phải là HUI
+\end{itemize}
