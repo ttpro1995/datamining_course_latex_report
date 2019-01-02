@@ -140,6 +140,14 @@ Bài báo có các đóng góp chính sau
   \item Tác giả làm thí nghiệm so sánh MHUI với các phương pháp tối tân hiện nay trên 8 cơ sở dữ liệu thưa và dày để chứng tỏ MHUI có ích. Phương pháp MHUI nhanh hơn HUI-MMU-TE \cite{lin2016efficient} và HIMU-EUCP \cite{gan2016more} hàng trăm lần.  
 \end{enumerate}
 
+\subsection{Công trình liên quan}
+
+\subsubsection{Tìm tập phổ biến: một và nhiều ngưỡng support}
+
+Khai thác luật kết hợp (Association Rule Mining - ARM) là một bài toán được nghiên cứu rộng rãi trong lĩnh vực khai thác dữ liệu. Khai thác luật kết hợp gồm 2 bước. Bước đầu là khai thác các món hàng thường xuất hiện cùng nhau trong các giao dịch. Bước sau, khai thác luật từ các tập hàng phổ biến đã tạo ra. Một số thuật toán nổi tiến bao gồm Apriori\cite{agrawal1994fast}, FP-Growth\cite{han2000mining}, Eclat\cite{zaki2000scalable}. 
+
+Thuật toán tìm tập hàng phổ biết thường chỉ có một hạn mức support nên thường bị vấn đề hàng hiếm \cite{liu1999mining}. Vì vậy, đã có một vài nghiên cứu về cách dùng nhiều hạn mức support. Một số thuật toán như MSApriori \cite{liu1999mining}, CFP-Growth \cite{hu2006mining}, CFP-Growth ++ \cite{kiran2011novel}, FP-ME \cite{gan2017mining}. Nhưng các phương pháp đó có những hạn chế như không thể áp dụng cho bài toán khai thác HUI có những đại lượng dùng tổng quát là giá trị hữu dụng như lợi nhuận, số lượng mua \cite{lin2016efficient}. 
+
 \section{Các định nghĩa về ký hiệu và bài toán}
 
 \subsection{Định nghĩa}
