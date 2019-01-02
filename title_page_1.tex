@@ -148,6 +148,16 @@ Khai thác luật kết hợp (Association Rule Mining - ARM) là một bài to�
 
 Thuật toán tìm tập hàng phổ biết thường chỉ có một hạn mức support nên thường bị vấn đề hàng hiếm \cite{liu1999mining}. Vì vậy, đã có một vài nghiên cứu về cách dùng nhiều hạn mức support. Một số thuật toán như MSApriori \cite{liu1999mining}, CFP-Growth \cite{hu2006mining}, CFP-Growth ++ \cite{kiran2011novel}, FP-ME \cite{gan2017mining}. Nhưng các phương pháp đó có những hạn chế như không thể áp dụng cho bài toán khai thác HUI có những đại lượng dùng tổng quát là giá trị hữu dụng như lợi nhuận, số lượng mua \cite{lin2016efficient}. 
 
+\subsubsection{Khai thác tập hữu dũng cao : Một ngưỡng hữu dụng}
+
+Khai thác tập hữu dụng (HUI mining) là một trong những chủ đề được nghiên cứu tích cực nhất trong mười năm nay. Vấn đề được nêu lên lần đầu bởi Liu và cộng sự (2005) để giải quyết hạn chế trong phương pháp khai thác luật kết hợp. Thuật toán hai bước \cite{liu2005two} đề xuất cách tạo ứng viên theo từng mức và cách kiểm chứng. Bước đầu, thuật toán khai thác tất cả nhóm hàng có giá trị hữu dụng theo trọng số giao dịch cao. Bước sau, giá trị hữu dụng của từng nhóm hàng được tính và nhóm không phải HUI bị lược bỏ. Các giải pháp tương tự như UMining and UMining\_H \cite{yao2006mining}, FUM and DCG+ \cite{li2008isolated}, GPA \cite{lan2012efficient}.
+
+Thuật toán khai thác theo từng bật không mở rộng tốt với dữ liệu lớn hay dày. Nên một vài phương pháp tiếp cận dạng cây được nghiên cứu như IHUP \cite{ahmed2009efficient}, HUC-Prune \cite{ahmed2011huc}, UP-Growth \cite{tseng2010up}, UP-Growth+ \cite{tseng2013efficient}.
+
+Các công trình gần đây sử dụng cấu trúc cơ sở dữ liệu dọc để khai thác HUI hiệu quả. Một cấu trúc dữ liệu dạng dãy hữu dụng để chứa thông tin về nhóm hàng. Một số công trình về dãy hữu dụng như HUI-Miner \cite{liu2012mining}, FHM \cite{fournier2014fhm}, HUP-Miner \cite{krishnamoorthy2015pruning}. Cách dùng dãy hữu dụng được chứng mình là tốt nhất vì nó không tạo ra ứng viên và sử dụng chiến thuật cắt tỉa hiệu quả \cite{fournier2014fhm} \cite{liu2012mining}. d2HUP \cite{liu2012mining} sử dụng cấu trúc dữ liệu hyperlink tên là CAUL để khai thac HUI hiệu quả.
+
+Thuật toán EFIM \cite{zida2017efim} dùng cơ sở dữ liệu ngang để lưu thông tin về nhóm hàng. Thuật toán gộp các giao dịch trùng lấp trong cơ sở dữ liệu dày đặc. 
+
 \section{Các định nghĩa về ký hiệu và bài toán}
 
 \subsection{Định nghĩa}
