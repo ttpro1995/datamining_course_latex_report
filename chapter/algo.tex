@@ -7,8 +7,8 @@
 \caption{\label{fig:algo1} MHUI main}
 \end{figure}
 
-\paragraph{Dữ liệu đầu vào} Cơ sở dữ liệu D, ngưỡng giá trị tiện ích tối thiểu cho từng món hàng.  
-\paragraph{Dữ liệu đầu ra} HUIs, tập các itemset có giá trị tiện ích cao.\\
+\paragraph{Dữ liệu đầu vào} Cơ sở dữ liệu D, ngưỡng giá trị hữu dụng tối thiểu cho từng món hàng.  
+\paragraph{Dữ liệu đầu ra} HUIs, tập các itemset có giá trị hữu dụng cao.\\
 
 
 
@@ -31,7 +31,7 @@ Sau khi kết thức vòng lập, sắp xếp ULs theo thứ tự TWU (dòng 17)
 \caption{\label{fig:algo2} MHUI Explore Search Tree}
 \end{figure}
 
-\paragraph{Dữ liệu đầu vào} Một itemset gọi là P, tập hợp có thứ tự các itemset ULs, ngưỡng giá trị tiện ích tối thiểu cho từng món hàng.
+\paragraph{Dữ liệu đầu vào} Một itemset gọi là P, tập hợp có thứ tự các itemset ULs, ngưỡng giá trị hữu dụng tối thiểu cho từng món hàng.
 
 \paragraph{Dữ liệu đầu ra} HUIs với tiền tố P \\
 
@@ -47,7 +47,7 @@ Quá trình duyệt cây sẽ lập qua mỗi X trong tập ULs. Nếu X thóa U
  
 Sau mỗi vòng lập ngoài (vòng lập của X) thuật toán gọi đệ quy gọi đệ quy Explore-Search-Tree(X, exULs) để duyệt cây theo depth first search. 
 
-\subsubsection{Xây dựng dãy tiện ích: Construct-Utility-List }
+\subsubsection{Xây dựng dãy hữu dụng: Construct-Utility-List }
 
 \paragraph{Dữ liệu đầu vào} UL itemset P, itemset Px, và itemset Py 
 

@@ -124,7 +124,7 @@ PGS.TS. LÊ HOÀI BẮC % Supervisor's Name
 \section{Giới thiệu}
 Báo cáo này sẽ trình bày về bài báo "Efficient mining of high utility itemsets with multiple minimum utility thresholds" \cite{krishnamoorthy2018efficient} của tác giả Srikumar Krishnamoorthy, thuộc đơn vị Học viện Quản lý Ahmedabad, Ấn Độ. Bài báo đăng trong tập chí Engineering Applications of Artificial Intelligence, năm 2018. 
 
-Bài báo cung cấp một giải pháp cho bài toán khai tập hàng có hữu dụng cao (high utility itemset mining). Giải quyết bài toán này cho phép người ra quyết định khả năng linh hoạc khi sử dụng những giá trị tiện ích của món hàng như lợi nhuận để khai thác những dấu hiệu từ cơ sở dữ liệu mà thông qua đó có thể đưa ra quyết định.  
+Bài báo cung cấp một giải pháp cho bài toán khai tập hàng có hữu dụng cao (high utility itemset mining). Giải quyết bài toán này cho phép người ra quyết định khả năng linh hoạc khi sử dụng những giá trị hữu dụng của món hàng như lợi nhuận để khai thác những dấu hiệu từ cơ sở dữ liệu mà thông qua đó có thể đưa ra quyết định.  
 
 Bài báo giới thiệu phương pháp tạo ra các tập hàng hữu dụng cao chỉ qua một bước mà không cần thông qua bước tạo các ứng cử viên tốn kém. Ngoài ra bài báo đề xuất một khái niệm gọi là tiền tố hữu dụng tối thiểu và phương pháp tỉa cây hiệu quả cho việc khai thác tập hàng có tính hữu dụng cao.
 
@@ -138,9 +138,9 @@ Bài báo giới thiệu phương pháp tạo ra các tập hàng hữu dụng c
 
 \subsection{Định nghĩa bài toán}
 
-\paragraph{Dữ liệu đầu vào} Cơ sở dữ liệu D chứa các giao dịch, $D = \{T_1, T_2, ..., T_m\}$, giá trị tiện ích trong và ngoài của mỗi món hàng, và ngưỡng giá trị tiện ích tối thiểu. (như trong hình \ref{fig:table2} và hình \ref{fig:table3}).
+\paragraph{Dữ liệu đầu vào} Cơ sở dữ liệu D chứa các giao dịch, $D = \{T_1, T_2, ..., T_m\}$, giá trị hữu dụng trong và ngoài của mỗi món hàng, và ngưỡng giá trị hữu dụng tối thiểu. (như trong hình \ref{fig:table2} và hình \ref{fig:table3}).
 
-\paragraph{Dữ liệu đầu ra} Tập HUI (high utility itemset) bao gồm các itemset X có giá trị tiện ích cao hơn giá trị tiện ích tối thiểu của itemset đó (như hình \ref{fig:table6}). HUI định nghĩa như sau
+\paragraph{Dữ liệu đầu ra} Tập HUI (high utility itemset) bao gồm các itemset X có giá trị hữu dụng cao hơn giá trị hữu dụng tối thiểu của itemset đó (như hình \ref{fig:table6}). HUI định nghĩa như sau
 
 $$HUI = \{ X : U(X) | X \subseteq I, U(X) \geq MIU(X) \} $$
 
