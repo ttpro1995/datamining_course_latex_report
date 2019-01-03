@@ -185,7 +185,7 @@ Công trình của bài báo này nhắm đến giải quyết các mặt hạn 
 
 \section{Các định nghĩa về ký hiệu và bài toán}
 
-\subsection{Định nghĩa}
+\subsection{Định nghĩa} \label{sec:def}
 % from def 1 -> 17
 \input{chapter/definition.tex} 
 
@@ -219,7 +219,7 @@ $$HUI = \{ X : U(X) | X \subseteq I, U(X) \geq MIU(X) \} $$
 
 \input{chapter/prune.tex}
 
-\subsection{Mã nguồn Java}
+\section{Mã nguồn Java}
 
 Mã nguồn Java do em (tác giả bài báo cáo) này viết để tìm hiểu thuật toán. Mã nguồn có thể xem và tải trên Github \footnote{\url{https://github.com/ttpro1995/krishnamoorthy2018efficient}}. 
 
@@ -262,6 +262,29 @@ e 3 62
 f 1 44
 g 6 90
 \end{lstlisting}
+
+
+\subsection{UML}
+
+\subsection{Cấu trúc dữ liệu}
+
+Các thực thể liên quan tới cấu trúc dữ liệu nằm trong package DataStructure \footnote{\url{https://github.com/ttpro1995/krishnamoorthy2018efficient/tree/master/src/main/java/me/thaithien/associationrules/krishnamoorthy2018efficient/DataStructure}}. 
+
+\paragraph{SimpleDatabase} Là cơ sở dữ liệu chứa thông tin giao dịch và thông tin sản phẩm, EU, MMU. SimpleDatabase mô phỏng hình \ref{fig:table2} và hình \ref{fig:table3}.
+
+\paragraph{EUCS} mô phỏng EUCS ở Định nghĩa 17 trong \ref{sec:def}. EUCS sử dụng cấu trúc hashmap có 2 trường khóa. Các trường khóa có thể thay thế vị trí cho nhau (ví dụ: $EUCS(x_1, x_2) = EUCS(x_2, x_1)$). 
+
+\paragraph{ItemsetUtilityList} mô phỏng hình \ref{fig:1itemset}. Mỗi thực thể ItemsetUtilityList là một cột trong hình \ref{fig:1itemset}, chứa itemset X, MIU(X), U(X), RU(X), và dãy các UtilityList. 
+
+\paragraph{UtilityList} là mỗi hàng trong hình \ref{fig:1itemset}, bao gồm các thông tin sau  $tid - U(X, T_tid) - RU(X, T_tid)$
+
+\subsection{Cài đặt thuật toán}
+
+Các hàm định nghĩa được nhắc trong mục \ref{sec:def} viết trong lớp "Common" \footnote{\url{https://github.com/ttpro1995/krishnamoorthy2018efficient/blob/master/src/main/java/me/thaithien/associationrules/krishnamoorthy2018efficient/Common.java}}. Các hàm định nghĩa 2, 7, 9, 10, 12, 13, 14, 15, 16 được cài đặt để sử dụng trong thuật toán. 
+
+Hàm các thuật toán ở hình \ref{fig:algo1}, hình \ref{fig:algo2}, hình \ref{fig:algo3} cài trong lớp Algorithm \footnote{\url{https://github.com/ttpro1995/krishnamoorthy2018efficient/blob/master/src/main/java/me/thaithien/associationrules/krishnamoorthy2018efficient/Algorithm.java}} 
+
+
 
 % % % Commands to include a figure:
 % \begin{figure}[h]
