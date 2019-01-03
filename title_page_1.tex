@@ -219,6 +219,50 @@ $$HUI = \{ X : U(X) | X \subseteq I, U(X) \geq MIU(X) \} $$
 
 \input{chapter/prune.tex}
 
+\subsection{Mã nguồn Java}
+
+Mã nguồn Java do em (tác giả bài báo cáo) này viết để tìm hiểu thuật toán. Mã nguồn có thể xem và tải trên Github \footnote{\url{https://github.com/ttpro1995/krishnamoorthy2018efficient}}. 
+
+Yêu cầu: 
+\begin{itemize}
+  \item Java 8 hoặc cao hơn 
+  \item Gradle \footnote{\url{https://gradle.org/}}
+\end{itemize}
+
+Phiên dịch chương trình bằng cách chạy lần lượt từng dòng lệnh sau (mã 1 \ref{lst:gradlebuild}) tại thư mục mã nguồn. Sau khi phiên dịch xong, vào tập tin .jar sẽ xuất hiện tại đường dẫn  "build/libs/krishnamoorthy2018efficient-all-1.0-SNAPSHOT.jar". 
+
+\begin{lstlisting}[caption={Câu lệnh phiên dịch chương trình}, label={lst:gradlebuild}, language=bash]
+gradle build
+gradle fatJar
+\end{lstlisting}
+
+Để chạy chương trình, chép tập tin "krishnamoorthy2018efficient-all-1.0-SNAPSHOT.jar" và 2 tập tin dữ liệu đầu vào "transaction\_data.txt" và "item\_profit\_and\_minimum\_thresholds.txt" vào cùng thư mục. Sau đó chạy câu lệnh "java -jar krishnamoorthy2018efficient-all-1.0-SNAPSHOT.jar transaction\_data.txt item\_profit\_and\_minimum\_thresholds.txt"
+
+Tập tin transaction\_data.txt chứa các thông tin giao dịch. Mỗi dòng là một giao dịch, bao gồm nhiều cặp "hàng, số lượng" cách nhau bằng dấu cách. Ví dụ tập tin như đoạn mã \ref{lst:db} thể hiện cơ sở dữ liệu trong hình \ref{fig:table2}.
+
+\begin{lstlisting}[caption={tập tin transaction\_data.txt}, label={lst:db}, language=bash]
+a,1 c,1 d,1
+a,2 c,6 e,2 g,5
+a,1 b,2 c,1 d,6 e,1 f,5
+b,4 c,3 d,3 e,1
+b,2 c,2 e,1 g,2
+a,3 c,3 d,3
+a,1 b,1 c,1 d,2 f,3
+a,1 b,2 c,2 e,1 f,1
+\end{lstlisting}
+
+Tập tin item\_profit\_and\_minimum\_thresholds.txt chứa lợi nhận (EU) hạn mức hữu dụng tối thiểu của từng món hàng. Mỗi dòng là một món hàng, theo cú pháp "tên hàng <khoảng cách> EU <khoảng cách> hạn mức hữu dụng tối thiểu". Ví dụ tập tin như đoạn mã \ref{lst:mmu} và thể hiện nội dung ở bảng trong hình \ref{fig:table2}.
+
+\begin{lstlisting}[caption={tập tin item\_profit\_and\_minimum\_thresholds.txt}, label={lst:mmu}, language=bash]
+a 5 80
+b 2 64
+c 4 77
+d 2 57
+e 3 62
+f 1 44
+g 6 90
+\end{lstlisting}
+
 % % % Commands to include a figure:
 % \begin{figure}[h]
 % \centering
