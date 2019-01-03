@@ -170,6 +170,19 @@ Cả hai công trình trên đều theo hướng tiếp cận hai bước và kh
 
 Các dạng vấn đề mở rộng như: Khai thác trên kệ FOSH \cite{fournier2015foshu}, phương pháp Top-K như TKO \cite{tseng2016aefficient} và KHMC \cite{duong2016aefficient}, khai thác HUI không chính xác và không chắc chắn như MUHUI \cite{Lin2017aEfficientlyMU}, PHUI-List\cite{lin2016befficient}, HUPNU và khai thác độ hữu dụng trung bình cao như MHAI, HAUI-Miner, HAUI-MMAU \cite{lin2016defficient}. 
 
+\subsubsection{Những cải tiến so với công trình trước đó}
+
+Tác giả lập bản so sánh (hình \ref{figtable1}). HUI-MMU-TE \cite{lin2016cefficient} và HIMU-EUCP \cite{gan2016more} là phương pháp tốt nhất cho khai thác HUI với nhiều hạn mức hữu dụng. HIMU và HIMU-EUCP \cite{gan2016more} gần nhất với công trình này. Cả hai phương pháp sếp các món hàng trong mỗi giao dịch dựa theo ngưỡng hữu dụng tối thiểu và mở rộng cách khai thác HUI cơ bản \cite{liu2012mining}. Ngưỡng hưu dụng tối thiểu được người ra quyết định chọn, nên một lượng thay đổi nhỏ sẽ ảnh hưởng lớn đến kết quả khai thác. Thêm nữa, phương pháp khai thác HUI cơ bản không thể áp dụng trực tiếp cho bài toán mới không có thứ tự của món hàng \cite{gan2016more} \cite{lin2016cefficient}. 
+
+Công trình của bài báo này nhắm đến giải quyết các mặt hạn chế và đề ra phương pháp khai thác HUI mới (MHUI). Tác giả đề ra khái niệm Hậu tố hữu dụng tối thiểu (SMU) và chiến thuật cắt tỉa cây cải thiện hiệu năng khai thác HUI. Công trình này không cần thứ tự của món hàng như những công trình trước. Công trình được thí nghiệm so sánh với HUI-MMU-TE \cite{lin2016cefficient} và HIMU-EUCP \cite{gan2016more} trên vài tập dữ liệu thưa và dày. 
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\textwidth]{image/table/table1-boring.jpg}
+\caption{\label{figtable1} So sánh các thuật toán}
+\end{figure}
+
 \section{Các định nghĩa về ký hiệu và bài toán}
 
 \subsection{Định nghĩa}
