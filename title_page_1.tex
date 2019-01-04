@@ -40,6 +40,7 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{listings}
 \usepackage{hyperref}
+
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
@@ -51,75 +52,90 @@
 \renewcommand{\lstlistingname}{Mã }% Listing -> Algorithm
 \addto\captionsenglish{\renewcommand{\figurename}{Hình}} % figure -> Hình 
 
-\usepackage{indentfirst} % thục dòng cái dòng đầu tiên 
 
+\usepackage{indentfirst} % thục dòng cái dòng đầu tiên 
+\usepackage[final]{pdfpages}
 \begin{document}
 
 \begin{titlepage}
-
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
-
-\center % Center everything on the page
- 
-%----------------------------------------------------------------------------------------
-%	HEADING SECTIONS
-%----------------------------------------------------------------------------------------
-
-\textsc{\LARGE Đại học Khoa học tự nhiên}\\[1.5cm] % Name of your university/college
-\textsc{\Large Ngành hệ thống thông tin}\\[0.5cm] % Major heading such as course name
-\textsc{\large Môn học: Khám phá tri thức và khai thác dữ liệu }\\[0.5cm] % Minor heading such as course title
-
-%----------------------------------------------------------------------------------------
-%	TITLE SECTION
-%----------------------------------------------------------------------------------------
-
-\HRule \\[0.4cm]
-{ \LARGE \bfseries Báo cáo cuối kỳ}\\[0.4cm]
-{ \huge \bfseries Tìm hiểu bài báo}\\[0.2cm] % Title of your document
-{ \huge \bfseries Efficient mining of high utility itemsets with multiple minimum utility thresholds}\\[0.4cm] % Title of your document
-\HRule \\[1.5cm]
- 
-%----------------------------------------------------------------------------------------
-%	AUTHOR SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{minipage}{0.4\textwidth}
-\begin{flushleft} \large
-\emph{Học viên:}\\
-Thái Thiện  -- 17C12031 % Your name
-\end{flushleft}
-\end{minipage}
-~
-\begin{minipage}{0.4\textwidth}
-\begin{flushright} \large
-\emph{Giảng viên:} \\
-PGS.TS. LÊ HOÀI BẮC % Supervisor's Name
-\end{flushright}
-\end{minipage}\\[2cm]
-
-% If you don't want a supervisor, uncomment the two lines below and remove the section above
-%\Large \emph{Author:}\\
-%John \textsc{Smith}\\[3cm] % Your name
-
-%----------------------------------------------------------------------------------------
-%	DATE SECTION
-%----------------------------------------------------------------------------------------
-
-% I don't want day because it is English
-% {\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
-
-%----------------------------------------------------------------------------------------
-%	LOGO SECTION
-%----------------------------------------------------------------------------------------
-
-\includegraphics{logo/rsz_3logo-khtn.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
- 
-%----------------------------------------------------------------------------------------
-
-\vfill % Fill the rest of the page with whitespace
-
+\includepdf[pages=1,pagecommand={}]{addpdf/datamining_cover.pdf}
 \end{titlepage}
+% \begin{titlepage}
 
+% \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+% \center % Center everything on the page
+ 
+% %----------------------------------------------------------------------------------------
+% %	HEADING SECTIONS
+% %----------------------------------------------------------------------------------------
+
+% \textsc{\LARGE Đại học Khoa học tự nhiên}\\[1.5cm] % Name of your university/college
+% \textsc{\Large Ngành hệ thống thông tin}\\[0.5cm] % Major heading such as course name
+% \textsc{\large Môn học: Khám phá tri thức và khai thác dữ liệu }\\[0.5cm] % Minor heading such as course title
+
+% %----------------------------------------------------------------------------------------
+% %	TITLE SECTION
+% %----------------------------------------------------------------------------------------
+
+% \HRule \\[0.4cm]
+% { \LARGE \bfseries Báo cáo cuối kỳ}\\[0.4cm]
+% { \huge \bfseries Tìm hiểu bài báo}\\[0.2cm] % Title of your document
+% { \huge \bfseries Efficient mining of high utility itemsets with multiple minimum utility thresholds}\\[0.4cm] % Title of your document
+% \HRule \\[1.5cm]
+ 
+% %----------------------------------------------------------------------------------------
+% %	AUTHOR SECTION
+% %----------------------------------------------------------------------------------------
+
+% \begin{minipage}{0.4\textwidth}
+% \begin{flushleft} \large
+% \emph{Học viên:}\\
+% Thái Thiện  -- 17C12031 % Your name
+% \end{flushleft}
+% \end{minipage}
+% ~
+% \begin{minipage}{0.4\textwidth}
+% \begin{flushright} \large
+% \emph{Giảng viên:} \\
+% PGS.TS. LÊ HOÀI BẮC % Supervisor's Name
+% \end{flushright}
+% \end{minipage}\\[2cm]
+
+% % If you don't want a supervisor, uncomment the two lines below and remove the section above
+% %\Large \emph{Author:}\\
+% %John \textsc{Smith}\\[3cm] % Your name
+
+% %----------------------------------------------------------------------------------------
+% %	DATE SECTION
+% %----------------------------------------------------------------------------------------
+
+% % I don't want day because it is English
+% % {\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+% %----------------------------------------------------------------------------------------
+% %	LOGO SECTION
+% %----------------------------------------------------------------------------------------
+
+% \includegraphics{logo/rsz_3logo-khtn.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+% %----------------------------------------------------------------------------------------
+
+% \vfill % Fill the rest of the page with whitespace
+
+% \end{titlepage}
+
+%\includepdf[pages={1,2}]{pdfpages/commentof.pdf}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\renewcommand{\contentsname}{Mục lục}
+\tableofcontents
+\newpage
+\renewcommand{\listfigurename}{Hình}
+\listoffigures
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Giới thiệu}
 Báo cáo này sẽ trình bày về bài báo "Efficient mining of high utility itemsets with multiple minimum utility thresholds" \cite{krishnamoorthy2018efficient} của tác giả Srikumar Krishnamoorthy, thuộc đơn vị Học viện Quản lý Ahmedabad, Ấn Độ. Bài báo đăng trong tập chí Engineering Applications of Artificial Intelligence, năm 2018. 
